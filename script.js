@@ -312,8 +312,7 @@ heroBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         if (btn.textContent.includes('Explore')) {
             document.querySelector('#destinations').scrollIntoView({ behavior: 'smooth' });
-        } else if (btn.textContent.includes('Watch Video')) {
-            showNotification('Video player coming soon!', 'info');
+        } 
         }
     });
 });
