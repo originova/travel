@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORIGINOVA - Luxury Travel & Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+		       <img src="logo.jpeg" class="logo-icon" alt="logo">
+                    <span class="logo-text">ORIGINOVA</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#destinations" class="nav-link">Destinations</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#offers" class="nav-link">Offers</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="btn-primary">Book Now</button>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <img src="hero.jpeg" alt="Luxury Travel Destination" class="hero-image">
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in-up">Journey Beyond <br><span class="gradient-text">Imagination</span></h1>
+                    <p class="hero-description fade-in-delayed">Experience luxury travel curated exclusively for those who seek perfection. Explore the world's most breathtaking destinations with unparalleled elegance.</p>
+                    <div class="hero-buttons fade-in-delayed">
+                        <button class="btn-primary btn-large">Explore Destinations</button>
+<!-- زر فتح الفيديو -->
+<button id="openVideoBtn" class="btn-secondary btn-large">Watch Video</button>
+
+<!-- مودال الفيديو -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <button class="close" id="closeBtn">&times;</button>
+    <video id="videoPlayer" controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>                    </div>
+                </div>
+
+                <!-- Floating Search Bar -->
+                <div class="floating-search">
+                    <div class="search-tabs">
+                        <button class="search-tab active">Destinations</button>
+                        <button class="search-tab">Hotels</button>
+                        <button class="search-tab">Flights</button>
+                    </div>
+                    <div class="search-form">
+                        <div class="search-field">
+                            <label>Location</label>
+                            <input type="text" placeholder="Where to?">
+                        </div>
+                        <div class="search-field">
+                            <label>Check In</label>
+                            <input type="date">
+                        </div>
+                        <div class="search-field">
+                            <label>Check Out</label>
+                            <input type="date">
+                        </div>
+                        <div class="search-field">
+                            <label>Guests</label>
+                            <select>
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4+ Guests</option>
+                            </select>
+                        </div>
+                        <button class="btn-search">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Explore the World</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Destinations</span></h2>
+                <p class="section-description">Handpicked locations that promise unforgettable experiences</p>
+            </div>
+
+            <div class="destinations-grid">
+                <div class="destination-card large">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1568322445389-f64ac2515020?q=80&w=677&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Giza">
+                        <div class="destination-overlay"></div>
+                    </div>
+                    <div class="destination-content">
+                        <span class="destination-badge">Popular</span>
+                        <h3 class="destination-title">Giza</h3>
+                        <p class="destination-location">Egypt, Africa</p>
+                        <div class="destination-info">
+                            <span class="destination-price">From $299</span>
+                            <button class="btn-icon">→</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1652377170273-72152e714b96?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Siwa Oasis">
+                        <div class="destination-overlay"></div>
+                    </div>
+                    <div class="destination-content">
+                        <span class="destination-badge">Luxury</span>
+                        <h3 class="destination-title">Siwa Oasis</h3>
+                        <p class="destination-location">Egypt, Africa</p>
+                        <div class="destination-info">
+                            <span class="destination-price">From $249</span>
+                            <button class="btn-icon">→</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1665643956022-ee053e925743?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sharm El-Shikh">
+                        <div class="destination-overlay"></div>
+                    </div>
+                    <div class="destination-content">
+                        <span class="destination-badge">Exotic</span>
+                        <h3 class="destination-title">Sharm El-Shikh</h3>
+                        <p class="destination-location">Egypt, Africa</p>
+                        <div class="destination-info">
+                            <span class="destination-price">From $149</span>
+                            <button class="btn-icon">→</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1705680757279-98fa1fe46853?q=80&w=1132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Maldives">
+                        <div class="destination-overlay"></div>
+                    </div>
+                    <div class="destination-content">
+                        <span class="destination-badge">Premium</span>
+                        <h3 class="destination-title">Luxor</h3>
+                        <p class="destination-location">Egypt, Africa</p>
+                        <div class="destination-info">
+                            <span class="destination-price">From $279</span>
+                            <button class="btn-icon">→</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1661956893568-a6e305457ea9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dubai">
+                        <div class="destination-overlay"></div>
+                    </div>
+                    <div class="destination-content">
+                        <span class="destination-badge">Modern</span>
+                        <h3 class="destination-title">Aswan</h3>
+                        <p class="destination-location">Egypt, Africa</p>
+                        <div class="destination-info">
+                            <span class="destination-price">From $199</span>
+                            <button class="btn-icon">→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Premium <span class="gradient-text">Services</span></h2>
+                <p class="section-description">Tailored experiences designed for discerning travelers</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3 class="service-title">Private Flights</h3>
+                    <p class="service-description">Experience ultimate luxury with our exclusive private jet services to any destination worldwide.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏨</div>
+                    <h3 class="service-title">Luxury Hotels</h3>
+                    <p class="service-description">Stay at the world's finest 5-star hotels and resorts, handpicked for exceptional service.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3 class="service-title">Custom Itineraries</h3>
+                    <p class="service-description">Personalized travel plans crafted by experts to match your unique preferences and desires.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌟</div>
+                    <h3 class="service-title">VIP Experiences</h3>
+                    <p class="service-description">Access exclusive events, private tours, and once-in-a-lifetime moments reserved for elite travelers.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3 class="service-title">Gourmet Dining</h3>
+                    <p class="service-description">Savor Michelin-starred cuisine and exclusive culinary experiences around the globe.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💎</div>
+                    <h3 class="service-title">Concierge 24/7</h3>
+                    <p class="service-description">Round-the-clock assistance ensuring every detail of your journey is perfectly executed.</p>
+                    <a href="#" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section id="offers" class="offers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Limited Time</span>
+                <h2 class="section-title">Exclusive <span class="gradient-text">Offers</span></h2>
+                <p class="section-description">Unmissable deals on luxury travel experiences</p>
+            </div>
+
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-badge">Save 30%</div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1594808816834-f716b56c4fc6?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mediterranean Cruise">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Alexandria</h3>
+                        <p class="offer-description">7-day luxury cruise through the stunning Alexandria coastline with all-inclusive amenities.</p>
+                        <div class="offer-details">
+                            <span class="offer-duration">7 Days / 6 Nights</span>
+                            <span class="offer-price">$279 <span class="original-price">$999</span></span>
+                        </div>
+                        <button class="btn-primary full-width">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-badge">Save 25%</div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1609101111867-2e1fe1b2a6b3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Safari Adventure">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Luxor & Aswan Timeless Journey</h3>
+                        <p class="offer-description">Trip to Luxor & Aswan exploring ancient temples, royal tombs, Nile cruises, and breathtaking sunsets.</p>
+                        <div class="offer-details">
+                            <span class="offer-duration">10 Days / 9 Nights</span>
+                            <span class="offer-price">$299 <span class="original-price">$1,499</span></span>
+                        </div>
+                        <button class="btn-primary full-width">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <div class="offer-badge">Save 40%</div>
+                    <div class="offer-image">
+                        <img src="https://images.unsplash.com/photo-1582623838120-455da222cdc7?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Island Paradise">
+                    </div>
+                    <div class="offer-content">
+                        <h3 class="offer-title">Hurghada Red Sea Escape</h3>
+                        <p class="offer-description">Trip to Hurghada featuring crystal-clear waters, snorkeling, island hopping, and vibrant beach vibes.</p>
+                        <div class="offer-details">
+                            <span class="offer-duration">5 Days / 4 Nights</span>
+                            <span class="offer-price">$199 <span class="original-price">$699</span></span>
+                        </div>
+                        <button class="btn-primary full-width">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-subtitle">Get in Touch</span>
+                    <h2 class="section-title">Plan Your Dream <span class="gradient-text">Journey</span></h2>
+                    <p class="contact-description">Our luxury travel experts are ready to craft your perfect escape. Share your vision with us, and we'll turn it into reality.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-content">
+                                <h4>Visit Us</h4>
+                                <p>123 Luxury Avenue, Monaco</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div class="contact-item-content">
+                                <h4>Email Us</h4>
+                                <p>concierge@originova.luxury</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📱</div>
+                            <div class="contact-item-content">
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john.doe@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Destination</label>
+                            <select required>
+                                <option value="">Select a destination</option>
+                                <option value="paris">Paris, France</option>
+                                <option value="santorini">Santorini, Greece</option>
+                                <option value="bali">Bali, Indonesia</option>
+                                <option value="maldives">Maldives</option>
+                                <option value="dubai">Dubai, UAE</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="Tell us about your dream vacation..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">✦</span>
+                        <span class="logo-text">ORIGINOVA</span>
+                    </div>
+                    <p class="footer-description">Crafting extraordinary journeys for discerning travelers since 2024. Your gateway to luxury travel experiences worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#offers">Special Offers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Private Flights</a></li>
+                        <li><a href="#">Luxury Hotels</a></li>
+                        <li><a href="#">Custom Itineraries</a></li>
+                        <li><a href="#">VIP Experiences</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-newsletter-text">Subscribe for exclusive offers and travel inspiration</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 ORIGINOVA. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
