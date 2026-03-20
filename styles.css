@@ -1225,3 +1225,11 @@ section {
   cursor: pointer;
   z-index: 1002;
 }
+select {
+    color: black;
+    background-color: white;
+}
+select option {
+    color: black;
+}
+
