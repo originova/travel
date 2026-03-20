@@ -568,15 +568,20 @@ btn.onclick = () => {
 // غلق المودال عند الضغط على زر الإغلاق
 closeBtn.onclick = () => {
   modal.classList.remove("show");
-  video.pause();
-  video.currentTime = 0; // إعادة الفيديو للبداية
+  // In case the video element/source fails to load, avoid JS errors.
+  if (video) {
+    video.pause();
+    video.currentTime = 0; // إعادة الفيديو للبداية
+  }
 }
 
 // غلق المودال عند الضغط خارج محتوى الفيديو
 window.onclick = (event) => {
   if(event.target == modal){
     modal.classList.remove("show");
-    video.pause();
-    video.currentTime = 0;
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
   }
 }
